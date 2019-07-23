@@ -1,0 +1,21 @@
+{
+  "name": "heroku-space-proxy",
+  "description": "connect from peered vpcs via pgbouncer to private spaces dbs.",
+  "keywords": [
+    "private-spaces"
+  ],
+  "formation": {
+    "pgbouncer": {
+      "quantity": 1,
+      "size": "Private-S"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/dhavalthakkar93/heroku-buildpack-pgbouncer.git"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}
